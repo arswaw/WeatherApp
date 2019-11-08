@@ -46,3 +46,10 @@ li a.active {
     background-color: transparent;
     text-align: center;
 }
+
+/* Some responsiveness */
+@media (min-width: 768px) {
+  body { 
+      max-width: 900px;
+  }
+}

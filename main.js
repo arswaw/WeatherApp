@@ -12,9 +12,9 @@ import {
 
 // Note that this should only be done while you are not exposed to the public Internet.
 // If you are, then you may need a server so you can keep this variable hidden.
-export const WEATHER_API_KEY = 'YOUR_KEY_HERE'
+export const WEATHER_API_KEY = '2f69a3fc1f1d2658ba2a8143a779f7e5'
 
-import Current from './components/current.js'
+import { Current } from './components/current.js'
 
 Vue.use(VueRouter)
 
@@ -33,6 +33,17 @@ const router = new VueRouter({
     // bandwidth and memory.
     component: () => import('./components/fiveday.js'),
     name: "Five Day Page"
+  },
+  {
+    path: '/tests',
+    // In keeping with the spirit of NoNode, no testing
+    // framework will be used for this sample project.
+    // In production, the best way to test this
+    // type of app is to find a testing framework that
+    // works natively with ES6 modules, and can be run
+    // from the command line without a package.json
+    component: () => import('./components/tests.js'),
+    name: "Tests Page"
   }]
 })
 
